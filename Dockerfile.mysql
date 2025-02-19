@@ -1,0 +1,11 @@
+# ใช้ MySQL 8.0 เป็น base image
+FROM mysql:8.0
+
+# ตั้งค่าตัวแปร environment (ค่าจะถูกโหลดจาก docker-compose.yml)
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=my_database
+ENV MYSQL_USER=my_user
+ENV MYSQL_PASSWORD=my_password
+
+# รัน MySQL Server
+CMD ["mysqld"]
